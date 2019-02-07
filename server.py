@@ -13,7 +13,7 @@ serverSocket = socket(AF_INET, SOCK_STREAM)
 # FILL IN START
 
 # Assign a port number
-serverPort = 12000
+serverPort = 6789
 
 # Bind the socket to server address and server port
 
@@ -78,7 +78,7 @@ while True:
 		connectionSocket.send(NOT_FOUND.encode())
 
  		# FILL IN END
-		connectionSocket.send("<html><head></head><body><h1>404 Not Found</h1></body></html>\r\n")
+		connectionSocket.send("<html><head></head><body><h1>404 Not Found</h1></body></html>\r\n".encode())
 
 		# Close the client connection socket
 		connectionSocket.close()
